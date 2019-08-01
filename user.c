@@ -43,6 +43,7 @@ void StartTask02(void const * argument)
     uint8_t rxData = (uint8_t)(evt.value.v);
     switch (rxData) {
     /* Delimiter */
+    case 0x0D:
     case 0x0A:
       /* To Command Parser */
       break;
@@ -57,6 +58,7 @@ void StartTask02(void const * argument)
     }
 
     /* Command Parser */
+    if (!rxCount) continue;
     rxBuffer[rxCount] = 0x00;
     if (!strcmp((const char *)rxBuffer, "hello")) {
       const char *ptr = "world\r\n";
