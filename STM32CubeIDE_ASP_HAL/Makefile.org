@@ -261,7 +261,7 @@ ifdef KERNEL_LIB
   LDFLAGS := $(LDFLAGS) -L$(KERNEL_LIB)
   REALCLEAN_FILES := libkernel.a $(REALCLEAN_FILES)
 else
-  ALL_LIBS = $(APPL_LIBS) $(SYSSVC_LIBS) libkernel.a ../../../STM32App/Debug/libSTM32App.a $(LIBS)
+  ALL_LIBS = $(APPL_LIBS) $(SYSSVC_LIBS) libkernel.a $(LIBS)
   LIBS_DEP = $(filter %.a,$(ALL_LIBS))
 endif
 
@@ -275,7 +275,7 @@ ifdef DATA_START_ADDRESS
 endif
 ifdef LDSCRIPT
   LDFLAGS := $(LDFLAGS) -Wl,-T,$(LDSCRIPT)
-  CFG1_OUT_LDFLAGS := $(CFG1_OUT_LDFLAGS) -Wl,-T,$(LDSCRIPT)
+  CFG1_OUT_LDFLAGS := $(CFG1_OUT_LDFLAGS) -Wl,-T,$(LDSCRIPT).org
 endif
 
 #

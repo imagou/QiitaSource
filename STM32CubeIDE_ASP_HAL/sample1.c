@@ -282,8 +282,6 @@ void alarm_handler(intptr_t exinf)
 	SVC_PERROR(irot_rdq(LOW_PRIORITY));
 }
 
-/* 旧メイン関数 */
-extern int stm32app_main(void);
 /*
  *  メインタスク
  */
@@ -301,8 +299,6 @@ void main_task(intptr_t exinf)
 #ifdef TOPPERS_SUPPORT_GET_UTM
 	SYSUTM	utime1, utime2;
 #endif /* TOPPERS_SUPPORT_GET_UTM */
-/* 初期化するため、旧メイン関数をコール */
-stm32app_main();
 
 	SVC_PERROR(syslog_msk_log(LOG_UPTO(LOG_INFO), LOG_UPTO(LOG_EMERG)));
 	syslog(LOG_NOTICE, "Sample program starts (exinf = %d).", (int_t) exinf);
