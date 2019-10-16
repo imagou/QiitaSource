@@ -1,0 +1,234 @@
+!SESSION 2015-12-31 00:17:06.503 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=ja_JP
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+This is a continuation of log file C:\cygwin\home\roi\toppers\asp-1.9.2\tools\TrueSTUDIO\.metadata\.bak_0.log
+Created Time: 2015-12-31 00:18:33.358
+
+!ENTRY TrueSTUDIO 1 0 2015-12-31 00:18:33.358
+!MESSAGE Target:ARM, Version:5.4.0, Build date: 20151109-1237, Installation dir:/C:/Program Files (x86)/Atollic/TrueSTUDIO for ARM 5.4.0/ide/
+
+!ENTRY TrueSTUDIO License 1 0 2015-12-31 00:18:33.997
+!MESSAGE Valid local features found: 0
+
+!ENTRY TrueSTUDIO License 1 0 2015-12-31 00:18:34.013
+!MESSAGE Valid network features found: 0
+
+!ENTRY TrueSTUDIO License 1 0 2015-12-31 00:18:34.013
+!MESSAGE License system initialized in 592ms
+
+!ENTRY TrueSTUDIO 1 0 2015-12-31 00:18:34.013
+!MESSAGE License numbers: 0 []
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:28.081
+!MESSAGE NLS unused message: の in: org.eclipse.ui.internal.navigator.messages
+
+!ENTRY com.atollic.truestudio.mbs 1 0 2015-12-31 00:19:28.845
+!MESSAGE MCU: STM32F401RE
+
+!ENTRY com.atollic.truestudio.mbs 1 0 2015-12-31 00:19:29.063
+!MESSAGE cache updated
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2015-12-31 00:19:29.157
+!MESSAGE stm32f401nucleo is still loading, but needs property FPU fixed. Fixing to 'FPv4-SP-D16'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2015-12-31 00:19:29.157
+!MESSAGE stm32f401nucleo is still loading, but needs property FPU fixed. Fixing to 'FPv4-SP-D16'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2015-12-31 00:19:29.173
+!MESSAGE stm32f401nucleo is still loading, but needs property FPU fixed. Fixing to 'FPv4-SP-D16'.
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.014
+!MESSAGE NLS unused message: CheckoutCommand_CheckoutLabel in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.014
+!MESSAGE NLS unused message: CheckoutCommand_CheckoutLabelWithQuestion in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.014
+!MESSAGE NLS unused message: CheckoutDialog_OkCheckoutWithQuestion in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.029
+!MESSAGE NLS unused message: RebaseResultDialog_StatusAborted in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.092
+!MESSAGE NLS unused message: RebaseResultDialog_StatusFailed in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.092
+!MESSAGE NLS unused message: RebaseResultDialog_StatusNothingToCommit in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.107
+!MESSAGE NLS unused message: RebaseResultDialog_StatusStopped in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.107
+!MESSAGE NLS unused message: PushResultDialog_title in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.107
+!MESSAGE NLS unused message: PushResultDialog_label in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.123
+!MESSAGE NLS unused message: BranchOperationUI_CheckoutRemoteTrackingAsLocal in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.123
+!MESSAGE NLS unused message: BranchResultDialog_DetachedHeadWarningDontShowAgain in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.123
+!MESSAGE NLS unused message: MergeResultDialog_StatusAborted in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.123
+!MESSAGE NLS unused message: MergeResultDialog_StatusFailed in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.138
+!MESSAGE NLS unused message: StagingView_RebaseAbort in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.170
+!MESSAGE NLS unused message: StagingView_RebaseContinue in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.170
+!MESSAGE NLS unused message: StagingView_RebaseLabel in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.170
+!MESSAGE NLS unused message: StagingView_RebaseSkip in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.185
+!MESSAGE NLS unused message: StagingView_Presentation in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.185
+!MESSAGE NLS unused message: StagingView_List in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.185
+!MESSAGE NLS unused message: StagingView_Tree in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:19:31.185
+!MESSAGE NLS unused message: StagingView_Find in: org.eclipse.egit.ui.internal.uitext
+
+!ENTRY com.atollic.truestudio.integration.processorexpert 0 0 2015-12-31 00:19:35.553
+!MESSAGE Atollic TrueSTUDIO Processor Expert integration is up.
+
+!ENTRY edu.hawaii.ics.csdl.jupiter 1 0 2015-12-31 00:19:36.569
+!MESSAGE Code Review is up.
+
+!ENTRY sst.gp.core 1 0 2015-12-31 00:19:38.129
+!MESSAGE sst.gp.core earlyStartup()
+
+!ENTRY sst.gp.core 1 0 2015-12-31 00:19:38.176
+!MESSAGE Register ResourceChangeListener to current workspace
+
+!ENTRY sst.gp.core 1 0 2015-12-31 00:19:38.176
+!MESSAGE Register WorkspaceSelectionListener to current workspace
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-12-31 00:19:38.269
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-12-31 00:19:38.269
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\roi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY sst.gp.core 1 0 2015-12-31 00:19:38.987
+!MESSAGE ##sst.gp.core Util##PLATFORM_INSTALL_LOCATION: C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM 5.4.0\ide
+
+!ENTRY sst.gp.core 1 0 2015-12-31 00:19:38.987
+!MESSAGE Platform installed location : C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM 5.4.0\ide
+
+!ENTRY sst.gp.core 1 0 2015-12-31 00:19:39.002
+!MESSAGE IS_ATOLLIC_PLUGIN_INSTALLED : true
+
+!ENTRY sst.gp.core 1 0 2015-12-31 00:19:39.002
+!MESSAGE ATOLLIC_INSTALL_STATUS(stm32): -1
+
+!ENTRY sst.gp.core 1 0 2015-12-31 00:19:39.002
+!MESSAGE ATOLLIC_INSTALL_STATUS(avr): -1
+
+!ENTRY sst.gp.core 1 0 2015-12-31 00:19:39.018
+!MESSAGE ATOLLIC_INSTALL_STATUS(arm): 2
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2015-12-31 00:19:40.578
+!MESSAGE iconv is loaded.
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2015-12-31 00:19:40.640
+!MESSAGE est is loaded.
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2015-12-31 00:19:40.843
+!MESSAGE libiconv-2 is loaded.
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2015-12-31 00:19:40.937
+!MESSAGE libintl-2 is loaded.
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2015-12-31 00:19:41.124
+!MESSAGE xerces-c_2_7 is loaded.
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2015-12-31 00:19:41.233
+!MESSAGE RIMXJNI is loaded.
+
+!ENTRY sst.csgp 1 0 2015-12-31 00:19:42.278
+!MESSAGE platform install loc : C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM 5.4.0\ide
+
+!ENTRY sst.tm 1 0 2015-12-31 00:19:42.341
+!MESSAGE C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM 5.4.0\ide\plugins\sst.tm_1.1.2.201508171502\CSHOME\
+
+!ENTRY sst.tm 1 0 2015-12-31 00:19:42.403
+!MESSAGE C:\cygwin\home\roi\toppers\asp-1.9.2\tools\TrueSTUDIO\.metadata\.plugins\sst.tm
+
+!ENTRY sst.tm 1 0 2015-12-31 00:19:46.992
+!MESSAGE 
+
+
+---------------------------------------------------
+2015/12/31 00:19:46
+---------------------------------------------------
+
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:20:36.928
+!MESSAGE NLS unused message: SWVLogView_DEMO_MODE in: com.atollic.truestudio.swv.core.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2015-12-31 00:23:34.714
+!MESSAGE NLS unused message: Autostart in: com.atollic.hardwaredebug.ui.messages
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-12-31 00:27:04.429
+!MESSAGE An internal error occurred during: "デバッグ・シンボル情報を読み取り:asp.elf".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.utils.debug.dwarf.DwarfReader.processCompileUnit(DwarfReader.java:471)
+	at org.eclipse.cdt.utils.debug.dwarf.DwarfReader.processDebugInfoEntry(DwarfReader.java:441)
+	at org.eclipse.cdt.utils.debug.dwarf.Dwarf.parseDebugInfoEntry(Dwarf.java:455)
+	at org.eclipse.cdt.utils.debug.dwarf.Dwarf.parseDebugInfo(Dwarf.java:387)
+	at org.eclipse.cdt.utils.debug.dwarf.Dwarf.parse(Dwarf.java:363)
+	at org.eclipse.cdt.utils.debug.dwarf.DwarfReader.getSourceFilesFromDebugInfoSection(DwarfReader.java:386)
+	at org.eclipse.cdt.utils.debug.dwarf.DwarfReader.getSourceFiles(DwarfReader.java:364)
+	at org.eclipse.cdt.utils.debug.dwarf.DwarfReader.getSourceFiles(DwarfReader.java:490)
+	at org.eclipse.cdt.debug.internal.core.executables.StandardSourceFilesProvider.getSourceFiles(StandardSourceFilesProvider.java:122)
+	at org.eclipse.cdt.debug.core.executables.ExecutablesManager.getSourceFiles(ExecutablesManager.java:558)
+	at org.eclipse.cdt.debug.core.executables.Executable.getSourceFiles(Executable.java:206)
+	at org.eclipse.cdt.debug.internal.ui.views.executables.SourceFilesContentProvider$QuickParseJob.run(SourceFilesContentProvider.java:53)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-12-31 00:29:07.002
+!MESSAGE An internal error occurred during: "デバッグ・シンボル情報を読み取り:asp.elf".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.utils.debug.dwarf.DwarfReader.processCompileUnit(DwarfReader.java:471)
+	at org.eclipse.cdt.utils.debug.dwarf.DwarfReader.processDebugInfoEntry(DwarfReader.java:441)
+	at org.eclipse.cdt.utils.debug.dwarf.Dwarf.parseDebugInfoEntry(Dwarf.java:455)
+	at org.eclipse.cdt.utils.debug.dwarf.Dwarf.parseDebugInfo(Dwarf.java:387)
+	at org.eclipse.cdt.utils.debug.dwarf.Dwarf.parse(Dwarf.java:363)
+	at org.eclipse.cdt.utils.debug.dwarf.DwarfReader.getSourceFilesFromDebugInfoSection(DwarfReader.java:386)
+	at org.eclipse.cdt.utils.debug.dwarf.DwarfReader.getSourceFiles(DwarfReader.java:364)
+	at org.eclipse.cdt.utils.debug.dwarf.DwarfReader.getSourceFiles(DwarfReader.java:490)
+	at org.eclipse.cdt.debug.internal.core.executables.StandardSourceFilesProvider.getSourceFiles(StandardSourceFilesProvider.java:122)
+	at org.eclipse.cdt.debug.core.executables.ExecutablesManager.getSourceFiles(ExecutablesManager.java:558)
+	at org.eclipse.cdt.debug.core.executables.Executable.getSourceFiles(Executable.java:206)
+	at org.eclipse.cdt.debug.internal.ui.views.executables.SourceFilesContentProvider$QuickParseJob.run(SourceFilesContentProvider.java:53)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2015-12-31 00:34:20.907
+!MESSAGE Unloading product manager

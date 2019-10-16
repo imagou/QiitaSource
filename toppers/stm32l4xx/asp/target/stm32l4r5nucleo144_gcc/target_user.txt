@@ -1,0 +1,79 @@
+=====================================================================
+                          stm32l4r5-nucleo-144依存部
+=====================================================================
+
+(1) 対応しているターゲットシステムの種類・構成
+
+stm32f4r5_nucleo144依存部は，STM社STM32L4R5 Nucleo-144をサポートしている．
+搭載しているチップはSTM32L4R5ZIT6である．
+
+(2) 使用する開発環境と動作検証した条件（バージョン，オプション等）
+
+コンパイラはGCCを用いる．動作確認に用いたコンパイラは以下の通りである．
+
+  gcc version 5.4(GCC ARM:2016q2-20160622)
+
+(3) ターゲット定義事項の規定
+
+(3-1) 割込み優先度
+
+CFG_INTで使用可能な割込み優先度の範囲は，-16 〜 -1 である．ARM-Mプロセ
+ッサ依存部のマニュアルあるように，TMIN_INTPRIに設定可能な値の最大値は
+-15であり，カーネル管理内の割込みは-15 〜 -1 の優先度を設定可能であり，
+カーネル管理外の割込みの優先度としては-16が使用可能である．
+
+(4) メモリマップ
+
+プログラムはFLASHへデータはRAMへ配置する．配置を変更するには，
+stm32f0xx_ram.ld/stm32f0xx_rom.ld を変更すること．
+
+(5) シリアルインタフェースドライバの情報
+
+シリアルインタフェースドライバでは，UART2を用いる．通信フォーマットは，
+115200bps, 8bit, non-parity, 1stopbitである．
+
+(6) システムログ機能の情報
+
+システムログの低レベル出力は，UART2を用いる．通信フォーマットは，
+115200bps, 8bit, non-parity, 1stopbitである．
+
+(7) システムクロックの変更設定
+コンパイルスイッチMSI_RANGEの設定でシステムクロックの設定を
+変更できる．
+MSI_RANGEを指定しない場合は、120000000Hz
+MSI_RANGE=5で、2000000Hz
+MSI_RANGE=6で、4000000Hz
+  :
+MSI_RANGE=11で、48000000Hzとなる．
+
+(8) ディレクトリ構成・ファイル構成
+ ./stm32l4r5nucleo144_gcc 
+   ./Makefile.target
+   ./stm32l4xx_ram.ld
+   ./stm32l4xx_rom.ld
+   ./target.tf
+   ./target_asm.inc
+   ./target_cfg1_out.h
+   ./target_check.tf
+   ./target_config.h
+   ./target_inithook.c
+   ./target_kernel.h
+   ./target_offset.tf
+   ./target_rename.def
+   ./target_rename.h
+   ./target_serial.cfg
+   ./target_serial.h
+   ./target_sil.h
+   ./target_stddef.h
+   ./target_syssvc.h
+   ./target_test.h
+   ./target_timer.cfg
+   ./target_timer.h
+   ./target_unrename.h
+   ./target_user.txt
+
+(9) バージョン履歴
+2018/08/29
+・最初のリリース
+
+以上．
