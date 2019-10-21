@@ -66,7 +66,8 @@ endif
 #
 #  ソースファイルのディレクトリの定義
 #
-SRCDIR = ..
+#SRCDIR = ..
+SRCDIR = ../../RTOS/asp
 
 #
 #  オブジェクトファイル名の拡張子の設定
@@ -146,7 +147,7 @@ endif
 CDEFS := $(CDEFS) 
 CDEFS := $(CDEFS) -DSTM32L475xx
 INCLUDES := -I. -I$(SRCDIR)/include -I$(SRCDIR)/arch -I$(SRCDIR) $(INCLUDES)
-INCLUDES := $(INCLUDES) -I../../../STM32App/Inc -I../../../STM32App/Drivers/STM32L4xx_HAL_Driver/Inc -I../../../STM32App/Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../STM32App/Drivers/CMSIS/Include
+INCLUDES := $(INCLUDES) -I../../STM32App/Inc -I../../STM32App/Drivers/STM32L4xx_HAL_Driver/Inc -I../../STM32App/Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../STM32App/Drivers/CMSIS/Include
 LDFLAGS := $(LDFLAGS) 
 CFG1_OUT_LDFLAGS := $(CFG1_OUT_LDFLAGS) 
 LIBS := $(LIBS) $(CXXLIBS)
@@ -167,7 +168,8 @@ ifdef USE_CXX
 else
   APPL_COBJS = $(APPLNAME).o 
 endif
-APPL_COBJS := $(APPL_COBJS) log_output.o vasyslog.o t_perror.o strerror.o
+#APPL_COBJS := $(APPL_COBJS) log_output.o vasyslog.o t_perror.o strerror.o
+APPL_COBJS := $(APPL_COBJS)
 APPL_CFLAGS =
 APPL_LIBS =
 ifdef APPLDIR
@@ -216,9 +218,10 @@ endif
 #
 #  ターゲットファイル（複数を同時に選択してはならない）
 #
-all: $(OBJFILE)
+#all: $(OBJFILE)
 #all: $(OBJNAME).bin
 #all: $(OBJNAME).srec
+all: $(CFG_COBJS) $(APPL_COBJS)
 
 ##### 以下は編集しないこと #####
 
@@ -255,7 +258,9 @@ vpath %.cfg $(APPL_DIR)
 KERNEL_LIB_OBJS = $(KERNEL_ASMOBJS) $(KERNEL_COBJS) $(KERNEL_LCOBJS)
 SYSSVC_OBJS = $(SYSSVC_ASMOBJS) $(SYSSVC_COBJS)
 APPL_OBJS = $(APPL_ASMOBJS) $(APPL_COBJS) $(APPL_CXXOBJS)
-ALL_OBJS = $(START_OBJS) $(APPL_OBJS) $(SYSSVC_OBJS) $(CFG_OBJS) \
+#ALL_OBJS = $(START_OBJS) $(APPL_OBJS) $(SYSSVC_OBJS) $(CFG_OBJS) \
+#											$(END_OBJS) $(HIDDEN_OBJS)
+ALL_OBJS = $(START_OBJS) $(APPL_OBJS) $(CFG_OBJS) \
 											$(END_OBJS) $(HIDDEN_OBJS)
 ifdef KERNEL_LIB
   ALL_LIBS = $(APPL_LIBS) $(SYSSVC_LIBS) -lkernel $(LIBS)
@@ -431,10 +436,13 @@ depend: cleandep kernel_cfg.timestamp gendepend \
 		cfg1_out.depend cfg1_out.d \
 		$(ALL_OBJS:.o=.d)
 else
+#depend: cleandep $(OFFSET_H) kernel_cfg.timestamp gendepend \
+#		cfg1_out.depend cfg1_out.d \
+#		$(KERNEL_AUX_COBJS:.o=.d) $(KERNEL_ASMOBJS:.o=.d) \
+#		$(KERNEL_COBJS:.o=.d) $(KERNEL_LCSRCS:.c=.d) $(ALL_OBJS:.o=.d)
 depend: cleandep $(OFFSET_H) kernel_cfg.timestamp gendepend \
 		cfg1_out.depend cfg1_out.d \
-		$(KERNEL_AUX_COBJS:.o=.d) $(KERNEL_ASMOBJS:.o=.d) \
-		$(KERNEL_COBJS:.o=.d) $(KERNEL_LCSRCS:.c=.d) $(ALL_OBJS:.o=.d)
+		$(ALL_OBJS:.o=.d)
 endif
 
 #
@@ -518,37 +526,37 @@ $(APPL_ASMOBJS): %.o: %.S
 #
 #  依存関係作成ルールの定義
 #
-$(KERNEL_COBJS:.o=.d): %.d: %.c
-	@$(PERL) $(SRCDIR)/utils/makedep -C $(CC) $(MAKEDEP_OPTS) \
-		-O "$(CFLAGS) $(KERNEL_CFLAGS)" $< >> Makefile.depend
+#$(KERNEL_COBJS:.o=.d): %.d: %.c
+#	@$(PERL) $(SRCDIR)/utils/makedep -C $(CC) $(MAKEDEP_OPTS) \
+#		-O "$(CFLAGS) $(KERNEL_CFLAGS)" $< >> Makefile.depend
 
-$(KERNEL_LCSRCS:.c=.d): %.d: %.c
-	@$(PERL) $(SRCDIR)/utils/makedep -C $(CC) $(MAKEDEP_OPTS) -T "$($*)" \
-		-O "-DALLFUNC $(CFLAGS) $(KERNEL_CFLAGS)" $< >> Makefile.depend
+#$(KERNEL_LCSRCS:.c=.d): %.d: %.c
+#	@$(PERL) $(SRCDIR)/utils/makedep -C $(CC) $(MAKEDEP_OPTS) -T "$($*)" \
+#		-O "-DALLFUNC $(CFLAGS) $(KERNEL_CFLAGS)" $< >> Makefile.depend
 
-$(KERNEL_ASMOBJS:.o=.d): %.d: %.S
-	@$(PERL) $(SRCDIR)/utils/makedep -C $(CC) $(MAKEDEP_OPTS) \
-		-O "$(CFLAGS) $(KERNEL_CFLAGS)" $< >> Makefile.depend
+#$(KERNEL_ASMOBJS:.o=.d): %.d: %.S
+#	@$(PERL) $(SRCDIR)/utils/makedep -C $(CC) $(MAKEDEP_OPTS) \
+#		-O "$(CFLAGS) $(KERNEL_CFLAGS)" $< >> Makefile.depend
 
-$(SYSSVC_COBJS:.o=.d): %.d: %.c
-	@$(PERL) $(SRCDIR)/utils/makedep -C $(CC) $(MAKEDEP_OPTS) \
-		-O "$(CFLAGS) $(SYSSVC_CFLAGS)" $< >> Makefile.depend
+#$(SYSSVC_COBJS:.o=.d): %.d: %.c
+#	@$(PERL) $(SRCDIR)/utils/makedep -C $(CC) $(MAKEDEP_OPTS) \
+#		-O "$(CFLAGS) $(SYSSVC_CFLAGS)" $< >> Makefile.depend
 
-$(SYSSVC_ASMOBJS:.o=.d): %.d: %.S
-	@$(PERL) $(SRCDIR)/utils/makedep -C $(CC) $(MAKEDEP_OPTS) \
-		-O "$(CFLAGS) $(SYSSVC_CFLAGS)" $< >> Makefile.depend
+#$(SYSSVC_ASMOBJS:.o=.d): %.d: %.S
+#	@$(PERL) $(SRCDIR)/utils/makedep -C $(CC) $(MAKEDEP_OPTS) \
+#		-O "$(CFLAGS) $(SYSSVC_CFLAGS)" $< >> Makefile.depend
 
 $(APPL_COBJS:.o=.d): %.d: %.c
 	@$(PERL) $(SRCDIR)/utils/makedep -C $(CC) $(MAKEDEP_OPTS) \
 		-O "$(CFLAGS) $(APPL_CFLAGS)" $< >> Makefile.depend
 
-$(APPL_CXXOBJS:.o=.d): %.d: %.cpp
-	@$(PERL) $(SRCDIR)/utils/makedep -C $(CXX) $(MAKEDEP_OPTS) \
-		-O "$(CFLAGS) $(APPL_CFLAGS)" $< >> Makefile.depend
+#$(APPL_CXXOBJS:.o=.d): %.d: %.cpp
+#	@$(PERL) $(SRCDIR)/utils/makedep -C $(CXX) $(MAKEDEP_OPTS) \
+#		-O "$(CFLAGS) $(APPL_CFLAGS)" $< >> Makefile.depend
 
-$(APPL_ASMOBJS:.o=.d): %.d: %.S
-	@$(PERL) $(SRCDIR)/utils/makedep -C $(CC) $(MAKEDEP_OPTS) \
-		-O "$(CFLAGS) $(APPL_CFLAGS)" $< >> Makefile.depend
+#$(APPL_ASMOBJS:.o=.d): %.d: %.S
+#	@$(PERL) $(SRCDIR)/utils/makedep -C $(CC) $(MAKEDEP_OPTS) \
+#		-O "$(CFLAGS) $(APPL_CFLAGS)" $< >> Makefile.depend
 
 #
 #  デフォルトコンパイルルールを上書き
